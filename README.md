@@ -22,7 +22,7 @@ The languague used fo this Project is Python in a Collaboratory environement.
 Data cleaning protocol consisted of checking for duplicate (then removing them), checking for the presence of missing data, and fixing inconsistent data by removing significant outliers.
 Scikit libraries were used for machine learning, such as Preprocessor. Predictions were done with both linear regression model and an optimized Random forest model.
 
-## Interpretation
+## Results and Interpretation
 
 ![image](https://user-images.githubusercontent.com/111167621/196871444-d4d6cc63-61e3-4e07-9dfb-cb67f111372a.png)
 
