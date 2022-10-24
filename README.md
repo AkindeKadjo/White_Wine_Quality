@@ -10,7 +10,7 @@ Image taken from [adrianysus.*com*](https://adrianysus.com/en/what-is-the-differ
 
 ## Introduction and Goals
 
-A common saying state that beauty lies in the eyes of the beholder; well, this could be applied to some extent when it comes to gaging wine quality. Wine quality assessment is often regarded as somewhat subjective, although there are definitely metrics that wine connoisseur tends to agree on. According to [bkwine.com](https://www.bkwine.com/features/more/assessing-wine-quality-ageing-potential-wine-pursuit-perfectly-mature-wine/) the main indices are: **balance** (no individual parts should be overwhelming), **length** (the persistence of the taste), **intensity** (indicative of the concentration), **complexity** (reflects the aromas and flavors), **acids**, and **tannins** (bitter and astringent taste). Knowing how all of these indices contributes to the appraisal of wine quality, one would wonder if the chemical components could of a wine sample could help gage what its potential metric would be. For this project, the goal is to model wine quality based on physicochemical tests available from a set of white *vinho verde* wine samples, from the north of Portugal.
+A common saying states that beauty lies in the eyes of the beholder; well, this could be applied to some extent to wine quality gauging. In fact, wine quality assessment is often regarded as somewhat subjective, although there are definitely metrics that wine connoisseurs tend to agree on. According to [bkwine.com](https://www.bkwine.com/features/more/assessing-wine-quality-ageing-potential-wine-pursuit-perfectly-mature-wine/) the main indices are: **balance** (no individual parts should be overwhelming), **length** (the persistence of the taste), **intensity** (indicative of the concentration), **complexity** (reflects the aromas and flavors), **acids**, and **tannins** (bitter and astringent taste). Knowing how all these indices contributes to the appraisal of wine quality, one would wonder if the chemical components of a wine sample could help gauge what its potential rating would be. For this project, the goal is to model wine quality based on physicochemical tests available from a set of white *vinho verde* wine samples, from the north of Portugal.
 
 ## Data Info
 The provided datasets is that of the white *vinho verde* wine samples, from the north of Portugal. [Data Source](https://archive.ics.uci.edu/ml/datasets/wine+quality)
@@ -18,17 +18,17 @@ The provided datasets is that of the white *vinho verde* wine samples, from the 
 
 ## Methods Used
 The language used for this Project is Python in a Collaboratory environment.
-Data cleaning protocol consisted of checking for duplicate (then removing them), checking for the presence of missing data, and fixing inconsistent data by removing significant outliers (data points outside of five time the standard deviation). Scikit libraries were used for machine learning. The nature of the target column, being the quality metrics, were both discrete and ordinal which allowed the pursuit of predicting those metrics using either a regression method or a classification method. Both avenues were explored. The methods of choice were RandomForestRegressor, XGBRegressor, RandomForestClassifier and XGBClassifier both with and without PCA. Tuning was applied as needed.
+Data cleaning protocol consisted of checking for duplicate (then removing them), checking for the presence of missing data, and fixing inconsistent data by removing significant outliers (data points outside of five time the standard deviation). Scikit libraries were used for machine learning. The nature of the target column, being the quality metrics, was both discrete and ordinal which allowed the pursuit of predicting those ratings using either a regression method or a classification method. Both avenues were explored. The methods of choice were RandomForestRegressor, XGBRegressor, RandomForestClassifier and XGBClassifier both with and without PCA. Tuning was applied as needed.
 
 
 ## Results and Interpretation
 
-A glance at the data distribution shows us that is overwhelmingly composed of wine quality metrics #5, #6, and #7 with very few #3, #4, #8, and #9.
+A glance at the data distribution shows us that it is overwhelmingly composed of wine quality rating #5, #6, and #7 with very few #3, #4, #8, and #9.
 
 ![image](https://user-images.githubusercontent.com/111167621/196871444-d4d6cc63-61e3-4e07-9dfb-cb67f111372a.png)
 
 >
-How do the metrics fare as a function of their chemical compositions? No clear trends could be drawn when it came to volatile acidity, citric acid, residual sugar, free sulfur dioxide. A somewhat of a positive correlation is observed with pH, sulphates and alcohol with few exceptions. On the other end, Fixed acidity, chlorides, total sulfur dioxide had a negative correlation with as well few exceptions.
+How do the ratings fare as a function of their chemical compositions? No clear trends could be drawn when it came to volatile acidity, citric acid, residual sugar, free sulfur dioxide. A somewhat of a positive correlation is observed with pH, sulphates and alcohol with few exceptions. On the other end, Fixed acidity, chlorides, total sulfur dioxide had a negative correlation with as well few exceptions.
 
 ![image](https://user-images.githubusercontent.com/111167621/196871614-4c9250a5-51a6-474d-84b9-17e84c53b238.png)
 
